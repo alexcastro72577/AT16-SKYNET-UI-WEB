@@ -51,31 +51,30 @@ function App() {
                     
                     <Router>
       
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/" element={<AppLayout />} >
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/booking" element={<BookingPage />} />
-          <Route path="/booking/person" element={<PersonPage />} />
-          <Route path="/booking/resources" element={<ResourcePage />} />
-          <Route path="/reporting" element={<Reporting />} />
-          <Route path="/convert-service/metadata" element={<Metadata />} />
-          <Route path="/convert-service/image" element={<Image />} />
-          <Route path="/convert-service/video" element={<Video />} />
-          <Route path="/convert-service/audio" element={<Audio />} />
-          <Route path="/convert-service/wav-to-txt" element={<WavToTxt />} />
-          <Route path="/convert-service/convert-ocr" element={<ConvertOcr />} />
-          <Route path="/convert-service/translator" element={<Translator />} />
-          <Route path="/machine-learning/object-recognizer" element={<ObjectRecognizer />} />
-          <Route path="/machine-learning/iris-recognition" element={<IrisRecognizer />} />
-          <Route path="/machine-learning/face-recognizer" element={<FaceRecognizer />} />
-          <Route path="/machine-learning/emotion-recognizer" element={<EmotionRecognizer />} />
+                        <Routes>
+                          <Route path="/" element={<Home />} />
+                          <Route path="/" element={<AppLayout />} >
+                            <Route path="/dashboard" element={<Dashboard />} />
+                            <Route path="/booking" element={<BookingPage />} />
+                            <Route path="/booking/person" element={<PersonPage />} />
+                            <Route path="/booking/resources" element={<ResourcePage />} />
+                            <Route path="/reporting" element={<Reporting />} />
+                            <Route path="/convert-service/metadata" element={<Metadata />} />
+                            <Route path="/convert-service/image" element={<Image />} />
+                            <Route path="/convert-service/video" element={<Video />} />
+                            <Route path="/convert-service/audio" element={<Audio />} />
+                            <Route path="/convert-service/wav-to-txt" element={<WavToTxt />} />
+                            <Route path="/convert-service/convert-ocr" element={<ConvertOcr />} />
+                            <Route path="/convert-service/translator" element={<Translator />} />
+                            <Route path="/machine-learning/object-recognizer" element={<ObjectRecognizer />} />
+                            <Route path="/machine-learning/iris-recognition" element={<IrisRecognizer />} />
+                            <Route path="/machine-learning/face-recognizer" element={<FaceRecognizer />} />
+                            <Route path="/machine-learning/emotion-recognizer" element={<EmotionRecognizer />} />
+                            <Route path="*" element={<> 404-Not found</>} />
+                          </Route>
+                        </Routes>
 
-          <Route path="*" element={<> 404-Not found</>} />
-        </Route>
-      </Routes>
-
-  </Router>
+                    </Router>
                     
                 </>
             </ThemeProvider>

@@ -1,16 +1,18 @@
 import { Link } from 'react-router-dom'
 const BookingPage = () => {
     return (
-        <div>
-            <h1>Booking Service</h1>
-        <Link to="/booking/person">
+        <main>
+            <div className="title"> Booking Service</div>
+            <br/>
+        <Link to="/booking/person" className="textLink">
           Insert Person
         </Link>
         <br/>
-        <Link to="/booking/resources">
+        <Link to="/booking/resources" className="textLink">
           Insert Resource
         </Link>
-      </div>
+      </main>
+        
     )
 }
 

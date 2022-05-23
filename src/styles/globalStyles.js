@@ -30,6 +30,12 @@ export const GlobalStyle = createGlobalStyle`
         display: grid;
         place-items: center;
       }
+      .textLink {
+        font-size: 1rem;
+        display: grid;
+        place-items: left;
+        color: ${({ theme }) => theme.text};
+      }
       
       /* Sidebar */
       .sidebar {

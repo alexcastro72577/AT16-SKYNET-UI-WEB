@@ -5,19 +5,19 @@ import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from '../components/Input';
 
 const Person = () => {
-	const [usuario, editUsuario] = useState({field: '', valid: null});
-	const [nombre, editNombre] = useState({field: '', valid: null});
-  const [gender, editGender] = useState({field: '', valid: null});
-	const [correo, editCorreo] = useState({field: '', valid: null});
-	const [telefono, editTelefono] = useState({field: '', valid: null});
+	const [name, editName] = useState({field: '', valid: null});
+	const [country, editCountry] = useState({field: '', valid: null});
+  	const [gender, editGender] = useState({field: '', valid: null});
+	const [city, editCity] = useState({field: '', valid: null});
+	const [age, editAge] = useState({field: '', valid: null});
 	const [validForm, editValidForm] = useState(null);
 
 	const expresiones = {
-		usuario: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras, numeros, guion y guion_bajo
-		nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    gender: /^[FM\s]{1,1}$/,
-		correo: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-		telefono: /^\d{1,3}$/ // 7 a 14 numeros.
+		name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras, numeros, guion y guion_bajo
+		country: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+    	gender: /^[FM\s]{1,1}$/,
+		city: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+		age: /^\d{1,3}$/ // 7 a 14 numeros.
 	}
 
 
@@ -25,18 +25,18 @@ const Person = () => {
 		e.preventDefault();
 
 		if(
-			usuario.valid === 'true' &&
-			nombre.valid === 'true' &&
-      gender.valid === 'true' &&
-			correo.valid === 'true' &&
-			telefono.valid === 'true'
+			name.valid === 'true' &&
+			country.valid === 'true' &&
+      		gender.valid === 'true' &&
+			city.valid === 'true' &&
+			age.valid === 'true'
 		){
 			editValidForm(true);
-			editUsuario({field: '', valid: ''});
-			editNombre({field: '', valid: null});
-      editGender({field: '', valid: null});
-			editCorreo({field: '', valid: null});
-			editTelefono({field: '', valid: null});
+			editName({field: '', valid: ''});
+			editCountry({field: '', valid: null});
+      		editGender({field: '', valid: null});
+			editCity({field: '', valid: null});
+			editAge({field: '', valid: null});
 
 			// ... 
 		} else {
@@ -50,24 +50,24 @@ const Person = () => {
 			<Form action="" onSubmit={onSubmit}>
 			
 				<Input
-					estado={usuario}
-					editState={editUsuario}
+					estado={name}
+					editState={editName}
 					tipo="text"
 					label="Full Name"
 					placeholder="John T"
-					name="usuario"
+					name="name"
 					leyendaError="The name can only contain letters and spaces."
-					expresionRegular={expresiones.usuario}
+					expresionRegular={expresiones.name}
 				/>
 				<Input
-					estado={nombre}
-					editState={editNombre}
+					estado={country}
+					editState={editCountry}
 					tipo="text"
 					label="Country"
 					placeholder="Bolivia"
-					name="usuario"
+					name="name"
 					leyendaError="The country can only contain letters and spaces."
-					expresionRegular={expresiones.nombre}
+					expresionRegular={expresiones.country}
 				/>
         		<Input
 					estado={gender}
@@ -80,24 +80,24 @@ const Person = () => {
 					expresionRegular={expresiones.gender}
 				/>
 				<Input
-					estado={correo}
-					editState={editCorreo}
+					estado={city}
+					editState={editCity}
 					tipo="text"
 					label="City"
 					placeholder="Sucre"
-					name="correo"
+					name="city"
 					leyendaError="The city can only contain letters and spaces."
-					expresionRegular={expresiones.correo}
+					expresionRegular={expresiones.city}
 				/>
 				<Input
-					estado={telefono}
-					editState={editTelefono}
+					estado={age}
+					editState={editAge}
 					tipo="text"
 					label="Age"
 					placeholder="27"
-					name="telefono"
+					name="age"
 					leyendaError="The age can only contain numbers and the maximum is 3 digits."
-					expresionRegular={expresiones.telefono}
+					expresionRegular={expresiones.age}
 				/>
 				{validForm === false && <ErrorMessage>
 					<p>
