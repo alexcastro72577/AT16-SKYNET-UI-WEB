@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { FaBars, FaLock, FaMoneyBill, FaUser, FaChartBar, FaGrinAlt, FaHeadphonesAlt, FaHeart, FaEye, FaVideo, FaImage, FaDog } from "react-icons/fa";
+import { FaBars, FaMoneyBill, FaChartBar, FaGrinAlt, FaHeadphonesAlt, FaHeart, FaEye, FaVideo, FaImage, FaDog } from "react-icons/fa";
 import { MdMessage } from "react-icons/md";
 import { BiCog } from "react-icons/bi";
 import { AiTwotoneFileExclamation } from "react-icons/ai";
@@ -136,7 +136,7 @@ const SideBar = ({ children }) => {
           className={`sidebar `}
         >
           <div className="top_section" >
-          <a href="/">
+          <a href="/dashboard">
           <svg
             width="24"
             height="24"

@@ -1,7 +1,6 @@
 
 import SideBar from "./components/Sidebar/SideBar";
 import { BrowserRouter as Router, Route, Routes, Outlet } from "react-router-dom";
-
 import Dashboard from "./pages/Dashboard";
 import WavToTxt from "./pages/WavToTxt";
 import Metadata from "./pages/Metadata";
@@ -22,6 +21,8 @@ import { darkTheme, lightTheme } from "./styles/theme";
 import { Helmet } from "react-helmet";
 import { ThemeProvider } from "styled-components";
 import BookingPage from "./pages/BookingPage";
+import PersonPage from "./pages/Booking/PersonPage";
+import ResourcePage from "./pages/Booking/ResourcesPage";
 export const ThemeContext = React.createContext(null);
 const AppLayout = () => (
   <SideBar>   
@@ -55,6 +56,8 @@ function App() {
         <Route path="/" element={<AppLayout />} >
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/booking" element={<BookingPage />} />
+          <Route path="/booking/person" element={<PersonPage />} />
+          <Route path="/booking/resources" element={<ResourcePage />} />
           <Route path="/reporting" element={<Reporting />} />
           <Route path="/convert-service/metadata" element={<Metadata />} />
           <Route path="/convert-service/image" element={<Image />} />

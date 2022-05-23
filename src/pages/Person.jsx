@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Form, Label, ContainerCenterButton, Button, SuccessMessage, ErrorMessage} from '../components/Formularios';
+import {Form, Label, ContainerCenterButton, Button, SuccessMessage, ErrorMessage} from '../components/FormStyles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from '../components/Input';

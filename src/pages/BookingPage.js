@@ -1,11 +1,16 @@
-import Person from "./Person"
-import Resource from "./Resource"
+import { Link } from 'react-router-dom'
 const BookingPage = () => {
     return (
         <div>
-            <Person/>
-            <Resource/>
-        </div>
+            <h1>Booking Service</h1>
+        <Link to="/booking/person">
+          Insert Person
+        </Link>
+        <br/>
+        <Link to="/booking/resources">
+          Insert Resource
+        </Link>
+      </div>
     )
 }
 
