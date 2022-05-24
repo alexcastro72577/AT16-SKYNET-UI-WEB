@@ -11,7 +11,7 @@ const Resource = () => {
 	const [state, editStateModel] = useState({field: '', valid: null});
 	const [validForm, editValidForm] = useState(null);
 
-	const expresiones = {
+	const expressions = {
 		name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
 		type: /^[a-zA-ZÀ-ÿ-0-9\s]{1,40}$/, 
     	model: /^[a-zA-ZÀ-ÿ-0-9\s]{1,40}$/,
@@ -53,7 +53,7 @@ const Resource = () => {
 					placeholder="Calefactor"
 					name="name"
 					errorLegend="The name can only contain letters and spaces."
-					statements={expresiones.name}
+					statements={expressions.name}
 				/>
 				<Input
 					state={type}
@@ -63,7 +63,7 @@ const Resource = () => {
 					placeholder="M30"
 					name="name"
 					errorLegend="The type can only contain letters, numbers and spaces."
-					statements={expresiones.type}
+					statements={expressions.type}
 				/>
         		<Input
 					state={model}
@@ -73,7 +73,7 @@ const Resource = () => {
 					placeholder="Micro-002"
 					name="model"
 					errorLegend="The model can only contain letters, numbers and spaces."
-					statements={expresiones.model}
+					statements={expressions.model}
 				/>
 				<Input
 					state={state}
@@ -83,7 +83,7 @@ const Resource = () => {
 					placeholder="Free"
 					name="state"
 					errorLegend="The state can only contain letters and spaces."
-					statements={expresiones.state}
+					statements={expressions.state}
 				/>
 				
 				{validForm === false && <ErrorMessage>

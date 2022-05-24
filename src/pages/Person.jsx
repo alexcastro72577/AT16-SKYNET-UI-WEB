@@ -12,12 +12,12 @@ const Person = () => {
 	const [age, editAge] = useState({field: '', valid: null});
 	const [validForm, editValidForm] = useState(null);
 
-	const expresiones = {
-		name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras, numeros, guion y guion_bajo
-		country: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	const expressions = {
+		name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
+		country: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
     	gender: /^[FM\s]{1,1}$/,
 		city: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-		age: /^\d{1,3}$/ // 7 a 14 numeros.
+		age: /^\d{1,3}$/
 	}
 
 
@@ -57,7 +57,7 @@ const Person = () => {
 					placeholder="John T"
 					name="name"
 					errorLegend="The name can only contain letters and spaces."
-					statements={expresiones.name}
+					statements={expressions.name}
 				/>
 				<Input
 					state={country}
@@ -67,7 +67,7 @@ const Person = () => {
 					placeholder="Bolivia"
 					name="name"
 					errorLegend="The country can only contain letters and spaces."
-					statements={expresiones.country}
+					statements={expressions.country}
 				/>
         		<Input
 					state={gender}
@@ -77,7 +77,7 @@ const Person = () => {
 					placeholder="M"
 					name="gender"
 					errorLegend="The gender can only contain F or M"
-					statements={expresiones.gender}
+					statements={expressions.gender}
 				/>
 				<Input
 					state={city}
@@ -87,7 +87,7 @@ const Person = () => {
 					placeholder="Sucre"
 					name="city"
 					errorLegend="The city can only contain letters and spaces."
-					statements={expresiones.city}
+					statements={expressions.city}
 				/>
 				<Input
 					state={age}
@@ -97,7 +97,7 @@ const Person = () => {
 					placeholder="27"
 					name="age"
 					errorLegend="The age can only contain numbers and the maximum is 3 digits."
-					statements={expresiones.age}
+					statements={expressions.age}
 				/>
 				{validForm === false && <ErrorMessage>
 					<p>
