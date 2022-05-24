@@ -1,46 +1,46 @@
 import React from 'react';
-import {Input, Label, GrupoInput, LeyendaError, IconoValidacion} from './FormStyles';
+import {Input, Label, GrupoInput, ErrorLegend, IconValidation} from './FormStyles';
 import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
-const ComponenteInput = ({estado, editState, tipo, label, placeholder, name, leyendaError, expresionRegular, funcion}) => {
+const ComponenteInput = ({state, editState, type, label, placeholder, name, errorLegend, statements, functionality}) => {
 	const onChange = (e) => {
-		editState({...estado, field: e.target.value});
+		editState({...state, field: e.target.value});
 	}
 
-	const validacion = () => {
-		if(expresionRegular){
-			if(expresionRegular.test(estado.field)){
-				editState({...estado, valid: 'true'});
+	const validation = () => {
+		if(statements){
+			if(statements.test(state.field)){
+				editState({...state, valid: 'true'});
 			} else {
-				editState({...estado, valid: 'false'});
+				editState({...state, valid: 'false'});
 			}
 		}
 
-		if(funcion){
-			funcion();
+		if(functionality){
+			functionality();
 		}
 	}
 
 	return (
 		<div>
-			<Label htmlFor={name} valid={estado.valid}>{label}</Label>
+			<Label htmlFor={name} valid={state.valid}>{label}</Label>
 			<GrupoInput>
 				<Input 
-					type={tipo}
+					type={type}
 					placeholder={placeholder} 
 					id={name}
-					value={estado.field}
+					value={state.field}
 					onChange={onChange}
-					onKeyUp={validacion}
-					onBlur={validacion}
-					valid={estado.valid}
+					onKeyUp={validation}
+					onBlur={validation}
+					valid={state.valid}
 				/>
-				<IconoValidacion 
-					icon={estado.valid === 'true' ? faCheckCircle : faTimesCircle}
-					valid={estado.valid}
+				<IconValidation 
+					icon={state.valid === 'true' ? faCheckCircle : faTimesCircle}
+					valid={state.valid}
 				/>
 			</GrupoInput>
-			<LeyendaError valid={estado.valid}>{leyendaError}</LeyendaError>
+			<ErrorLegend valid={state.valid}>{errorLegend}</ErrorLegend>
 		</div>
 	);
 }

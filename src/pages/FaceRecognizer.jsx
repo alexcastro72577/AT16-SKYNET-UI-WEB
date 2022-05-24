@@ -3,3 +3,4 @@ const FaceRecognizer = () => {
   };
   
   export default FaceRecognizer;
+  

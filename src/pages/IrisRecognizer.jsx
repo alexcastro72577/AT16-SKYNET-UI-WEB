@@ -3,3 +3,4 @@ const IrisRecognizer = () => {
   };
   
   export default IrisRecognizer;
+  

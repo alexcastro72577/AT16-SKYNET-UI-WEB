@@ -50,54 +50,54 @@ const Person = () => {
 			<Form action="" onSubmit={onSubmit}>
 			
 				<Input
-					estado={name}
+					state={name}
 					editState={editName}
-					tipo="text"
+					type="text"
 					label="Full Name"
 					placeholder="John T"
 					name="name"
-					leyendaError="The name can only contain letters and spaces."
-					expresionRegular={expresiones.name}
+					errorLegend="The name can only contain letters and spaces."
+					statements={expresiones.name}
 				/>
 				<Input
-					estado={country}
+					state={country}
 					editState={editCountry}
-					tipo="text"
+					type="text"
 					label="Country"
 					placeholder="Bolivia"
 					name="name"
-					leyendaError="The country can only contain letters and spaces."
-					expresionRegular={expresiones.country}
+					errorLegend="The country can only contain letters and spaces."
+					statements={expresiones.country}
 				/>
         		<Input
-					estado={gender}
+					state={gender}
 					editState={editGender}
-					tipo="text"
+					type="text"
 					label="Gender"
 					placeholder="M"
 					name="gender"
-					leyendaError="The gender can only contain F or M"
-					expresionRegular={expresiones.gender}
+					errorLegend="The gender can only contain F or M"
+					statements={expresiones.gender}
 				/>
 				<Input
-					estado={city}
+					state={city}
 					editState={editCity}
-					tipo="text"
+					type="text"
 					label="City"
 					placeholder="Sucre"
 					name="city"
-					leyendaError="The city can only contain letters and spaces."
-					expresionRegular={expresiones.city}
+					errorLegend="The city can only contain letters and spaces."
+					statements={expresiones.city}
 				/>
 				<Input
-					estado={age}
+					state={age}
 					editState={editAge}
-					tipo="text"
+					type="text"
 					label="Age"
 					placeholder="27"
 					name="age"
-					leyendaError="The age can only contain numbers and the maximum is 3 digits."
-					expresionRegular={expresiones.age}
+					errorLegend="The age can only contain numbers and the maximum is 3 digits."
+					statements={expresiones.age}
 				/>
 				{validForm === false && <ErrorMessage>
 					<p>

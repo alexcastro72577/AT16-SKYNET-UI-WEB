@@ -46,44 +46,44 @@ const Resource = () => {
 			<Form action="" onSubmit={onSubmit}>
 			
 				<Input
-					estado={name}
+					state={name}
 					editState={editName}
-					tipo="text"
+					type="text"
 					label="Name"
 					placeholder="Calefactor"
 					name="name"
-					leyendaError="The name can only contain letters and spaces."
-					expresionRegular={expresiones.name}
+					errorLegend="The name can only contain letters and spaces."
+					statements={expresiones.name}
 				/>
 				<Input
-					estado={type}
+					state={type}
 					editState={editType}
-					tipo="text"
+					type="text"
 					label="Type"
 					placeholder="M30"
 					name="name"
-					leyendaError="The type can only contain letters, numbers and spaces."
-					expresionRegular={expresiones.type}
+					errorLegend="The type can only contain letters, numbers and spaces."
+					statements={expresiones.type}
 				/>
         		<Input
-					estado={model}
+					state={model}
 					editState={editModel}
-					tipo="text"
+					type="text"
 					label="Model"
 					placeholder="Micro-002"
 					name="model"
-					leyendaError="The model can only contain letters, numbers and spaces."
-					expresionRegular={expresiones.model}
+					errorLegend="The model can only contain letters, numbers and spaces."
+					statements={expresiones.model}
 				/>
 				<Input
-					estado={state}
+					state={state}
 					editState={editStateModel}
-					tipo="text"
+					type="text"
 					label="State"
 					placeholder="Free"
 					name="state"
-					leyendaError="The state can only contain letters and spaces."
-					expresionRegular={expresiones.state}
+					errorLegend="The state can only contain letters and spaces."
+					statements={expresiones.state}
 				/>
 				
 				{validForm === false && <ErrorMessage>

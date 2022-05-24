@@ -56,7 +56,7 @@ const Input = styled.input`
 	`}
 `;
 
-const LeyendaError = styled.p`
+const ErrorLegend = styled.p`
 	font-size: 12px;
 	margin-bottom: 0;
 	color: ${colores.error};
@@ -69,7 +69,7 @@ const LeyendaError = styled.p`
 	`}
 `;
 
-const IconoValidacion = styled(FontAwesomeIcon)`
+const IconValidation = styled(FontAwesomeIcon)`
 	position: absolute;
 	right: 10px;
 	bottom: 14px;
@@ -150,8 +150,8 @@ export {
 	Label,
 	GrupoInput,
 	Input,
-	LeyendaError,
-	IconoValidacion,
+	ErrorLegend,
+	IconValidation,
 	ContenedorTerminos,
 	ContainerCenterButton,
 	Button,

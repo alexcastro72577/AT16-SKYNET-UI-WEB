@@ -3,3 +3,4 @@ const ObjectRecognizer = () => {
   };
   
   export default ObjectRecognizer;
+  
