@@ -4,9 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { ApolloProvider } from '@apollo/client';
+import clientSkyNet from './apollo_client/ClientSkyNet';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={clientSkyNet}>
+      <App />
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

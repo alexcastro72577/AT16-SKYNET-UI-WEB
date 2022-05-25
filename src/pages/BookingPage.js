@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Resources from '../components/Resources'
 const BookingPage = () => {
     return (
         <main>
@@ -11,6 +12,9 @@ const BookingPage = () => {
         <Link to="/booking/resources" className="textLink">
           Insert Resource
         </Link>
+        <br />
+        <hr />
+        <Resources />
       </main>
         
     )
