@@ -3,6 +3,9 @@ import {Form, Label, ContainerCenterButton, Button, SuccessMessage, ErrorMessage
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from '../components/Input';
+import POST_PERSONS from "../apollo_client/graphql/booking_service/mutation/postPersons"; 
+import { useMutation } from '@apollo/client';
+import GET_PERSONS from "../apollo_client/graphql/booking_service/query/getPersons";
 
 const Person = () => {
 	const [name, editName] = useState({field: '', valid: null});
@@ -11,6 +14,14 @@ const Person = () => {
 	const [city, editCity] = useState({field: '', valid: null});
 	const [age, editAge] = useState({field: '', valid: null});
 	const [validForm, editValidForm] = useState(null);
+	const name1 = name.field
+	const country1 = country.field
+	const gender1 = gender.field
+	const city1 = city.field
+	const age1 = age.field
+	const [ createPerson ] = useMutation(POST_PERSONS, {
+		refetchQueries: [{ query: GET_PERSONS}]
+	})
 
 	const expressions = {
 		name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
@@ -31,14 +42,13 @@ const Person = () => {
 			city.valid === 'true' &&
 			age.valid === 'true'
 		){
+			createPerson ({variables: {name1, age1, country1, gender1, city1}});
 			editValidForm(true);
 			editName({field: '', valid: ''});
 			editCountry({field: '', valid: null});
       		editGender({field: '', valid: null});
 			editCity({field: '', valid: null});
 			editAge({field: '', valid: null});
-
-			// ... 
 		} else {
 			editValidForm(false);
 		}

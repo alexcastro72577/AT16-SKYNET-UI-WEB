@@ -14,6 +14,7 @@ const Resources = () => {
                 data.listPosts.posts.map(res => (
                     <div key={res.resource_name}>
                         resource name = {res.resource_name} <br/>
+                        resource type = {res.resource_type} <br/>
                         resource model = {res.resource_model} <br/>
                         resource state = {res.resource_state} <br/><hr/>
                     </div>
