@@ -31,9 +31,9 @@ const AppLayout = () => (
 
   );
 function App() {
-  const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState("light");
   const themeStyle = theme === "light" ? darkTheme : lightTheme;
-  return (
+  return (  
     <ThemeContext.Provider value={{ setTheme, theme }}>
             <ThemeProvider theme={themeStyle}>
                 <GlobalStyle />
@@ -45,11 +45,10 @@ function App() {
                         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
                         rel="stylesheet"
                     />
-                </Helmet>
-                <>
-                    
-                    <Router>
-      
+                </Helmet>                 
+                                                                
+                <>                                  
+                    <Router>                  
                         <Routes>
                           <Route path="/" element={<Home />} />
                           <Route path="/" element={<AppLayout />} >
