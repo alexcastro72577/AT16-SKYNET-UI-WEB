@@ -7,12 +7,11 @@ const GET_RESOURCES = gql`
             errors
             posts {
                 _id
-			    resource_name
+                resource_name
                 resource_type
                 resource_model
                 resource_state
             }
-    
         }
     }
 `
