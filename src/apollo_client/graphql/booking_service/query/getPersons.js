@@ -6,10 +6,12 @@ const GET_PERSONS = gql`
             success
             errors
             posts {
-                person_city
-                person_full_name
-                person_country
                 _id
+                person_full_name
+                person_age
+                person_city
+                person_country
+                person_gender
             }
         }
     }

@@ -1,21 +1,24 @@
 import { Link } from 'react-router-dom'
 import Resources from '../components/Resources'
+import Persons from '../components/Persons'
+import BookingTabs from '../components/BookingComponents/BookingTabs'
+import { Tabs } from 'antd';
+const { TabPane } = Tabs;
+
+
 const BookingPage = () => {
     return (
-        <main>
-            <div className="title"> Booking Service</div>
-            <br/>
-        <Link to="/booking/person" className="textLink">
-          Insert Person
-        </Link>
-        <br/>
-        <Link to="/booking/resources" className="textLink">
-          Insert Resource
-        </Link>
-        <br />
-        <hr />
-        <Resources />
-      </main>
+      <Tabs defaultActiveKey="1" centered>
+      <TabPane tab="Booking" key="1">
+      Booking
+      </TabPane>
+      <TabPane tab="Person" key="2">
+      <Persons/>
+      </TabPane>
+      <TabPane tab="Resource" key="3">
+      <Resources/>
+      </TabPane>
+    </Tabs>
         
     )
 }
