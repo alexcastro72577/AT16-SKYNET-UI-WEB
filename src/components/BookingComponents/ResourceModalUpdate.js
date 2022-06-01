@@ -35,11 +35,11 @@ const ResourceModalUpdate = (props) => {
     console.log("Nuevos Valores:")
     console.log(values)
     const id= values.id
-    const name1= values.name
-    const type1= values.type
-    const model1= values.model
-    const state1= values.state
-    updateResource ({variables: {id, name1, type1, model1, state1}});
+    const name_value= values.name
+    const type_value= values.type
+    const model_value= values.model
+    const state_value= values.state
+    updateResource ({variables: {id, name_value: name_value, type_value: type_value, model_value: model_value, state_value: state_value}});
     handleCancel()
    
   };

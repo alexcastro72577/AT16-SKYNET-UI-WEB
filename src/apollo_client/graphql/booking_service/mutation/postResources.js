@@ -1,12 +1,12 @@
 import { gql } from '@apollo/client'
 
 const POST_RESOURCES = gql`
-    mutation CreateNewPost($name1: String!, $type1: String!, $model1: String!, $state1: String!) {
+    mutation CreateNewPost($name_value: String!, $type_value: String!, $model_value: String!, $state_value: String!) {
         createPost(
-        name: $name1,
-        type: $type1,
-  	    model: $model1,
-  	    state: $state1)
+        name: $name_value,
+        type: $type_value,
+  	    model: $model_value,
+  	    state: $state_value)
         { 
             post{
                 resource_name
@@ -20,8 +20,3 @@ const POST_RESOURCES = gql`
     }
 `
 export default POST_RESOURCES
-
-<<<<<<< HEAD
-=======
-
->>>>>>> b96249753ab14377b81fd4ae2f6599d0829731ca

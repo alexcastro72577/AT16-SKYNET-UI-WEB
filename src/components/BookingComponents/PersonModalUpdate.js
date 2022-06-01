@@ -37,13 +37,13 @@ const PersonModalUpdate = (props) => {
   const onFinish = (values) => {
     console.log(values);
     const id = values.id
-    const name1= values.name
-    const age1= values.age
-    const city1= values.city
-    const country1= values.country
-    const gender1= values.gender
+    const name_value= values.name
+    const age_value= values.age
+    const city_value= values.city
+    const country_value= values.country
+    const gender_value= values.gender
     // Change mutation script
-    updatePerson ({variables: {id, name1, age1, city1, country1, gender1}});
+    updatePerson ({variables: {id, name_value: name_value, age_value: age_value, city_value: city_value, country_value: country_value, gender_value: gender_value}});
     handleCancel()
   };
   const onReset = () => {

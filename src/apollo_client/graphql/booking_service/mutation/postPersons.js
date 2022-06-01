@@ -1,13 +1,13 @@
 import { gql } from '@apollo/client'
 
 const POST_PERSONS = gql`
-    mutation listar($name1: String!, $age1: String!, $country1: String!, $gender1: String!, $city1: String!) {
+    mutation listar($name_value: String!, $age_value: String!, $country_value: String!, $gender_value: String!, $city_value: String!) {
         createPerson(
-        name: $name1,
-        age: $age1,
-  	    country: $country1,
-        gender: $gender1
-  	    city: $city1)
+        name: $name_value,
+        age: $age_value,
+  	    country: $country_value,
+        gender: $gender_value,
+  	    city: $city_value)
         { 
             success
             errors

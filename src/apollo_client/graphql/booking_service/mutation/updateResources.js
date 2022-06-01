@@ -2,13 +2,13 @@ import { gql } from '@apollo/client'
 
 const UPDATE_RESOURCE = gql`
 
-    mutation resource($id: ID!, $name1: String!, $type1: String!, $model1: String!, $state1: String!) {
+    mutation resource($id: ID!, $name_value: String!, $type_value: String!, $model_value: String!, $state_value: String!) {
         updatePost(
         id_source: $id,
-        name: $name1,
-        type: $type1,
-        model: $model1,
-        state: $state1)
+        name: $name_value,
+        type: $type_value,
+        model: $model_value,
+        state: $state_value)
         {
             success
             errors

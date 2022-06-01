@@ -28,11 +28,11 @@ const ResourceModalCreate = () => {
   const [form] = Form.useForm();
   const onFinish = (values) => {
     console.log(values);
-    const name1= values.name
-    const type1= values.type
-    const model1= values.model
-    const state1= values.state
-    createResource ({variables: {name1, type1, model1, state1}});
+    const name_value= values.name
+    const type_value= values.type
+    const model_value= values.model
+    const state_value= values.state
+    createResource ({variables: {name1: name_value, type1: type_value, model1: model_value, state1: state_value}});
     handleCancel()
   };
   const onReset = () => {
