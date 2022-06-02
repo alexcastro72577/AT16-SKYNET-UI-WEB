@@ -8,6 +8,7 @@ const GET_RESOURCES = gql`
             posts {
                 _id
                 resource_name
+                resource_type
                 resource_model
                 resource_state
             }

@@ -3,13 +3,23 @@ import {Form, Label, ContainerCenterButton, Button, SuccessMessage, ErrorMessage
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from '../components/Input';
+import POST_RESOURCES from "../apollo_client/graphql/booking_service/mutation/postResources"; 
+import { useMutation } from '@apollo/client';
+import GET_RESOURCES from "../apollo_client/graphql/booking_service/query/getResources";
 
-const Resource = () => {
+export const Resource = () => {
 	const [name, editName] = useState({field: '', valid: null});
 	const [type, editType] = useState({field: '', valid: null});
   	const [model, editModel] = useState({field: '', valid: null});
 	const [state, editStateModel] = useState({field: '', valid: null});
 	const [validForm, editValidForm] = useState(null);
+	const name1 = name.field
+	const type1 = type.field
+	const model1 = model.field
+	const state1 = state.field
+	const [ createResource ] = useMutation(POST_RESOURCES, {
+		refetchQueries: [{ query: GET_RESOURCES}]
+	})
 
 	const expressions = {
 		name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
@@ -28,12 +38,14 @@ const Resource = () => {
       		model.valid === 'true' &&
 			state.valid === 'true'
 		){
+
+			createResource ({variables: {name1, type1, model1, state1}});
 			editValidForm(true);
 			editName({field: '', valid: ''});
 			editType({field: '', valid: null});
      		editModel({field: '', valid: null});
 			editStateModel({field: '', valid: null});
-
+			
 			// ... 
 		} else {
 			editValidForm(false);
