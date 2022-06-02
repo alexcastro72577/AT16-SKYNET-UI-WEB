@@ -1,6 +1,6 @@
 
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBZy5MgIbi3uTiD4Rh5f4D14FiwJCWzAlM",
@@ -23,12 +23,20 @@ export const signInWithGoogle = () => {
       const name = result.user.displayName;
       const email = result.user.email;
       const profilePic = result.user.photoURL;
+      const phoneNumber = result.user.phoneNumber
 
       localStorage.setItem("name", name);
       localStorage.setItem("email", email);
-      localStorage.setItem("profilePic", profilePic);
+      localStorage.setItem("profilePic", profilePic);      
+      if(result.user) {
+       window.location = '/dashboard'; //After successful login, user will be redirected to the page that is select
+     }
+     
+
     })
     .catch((error) => {
       console.log(error);
     });
+    
 };
+
