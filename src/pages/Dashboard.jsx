@@ -5,7 +5,7 @@ const Dashboard = () => {
   
   <div className="App">
     <section>
-    <div className="title"> Welcome to Skynet!</div>
+    <div className="title"> Welcome {localStorage.getItem("name")} to Skynet! <img src={localStorage.getItem("profilePic")} /></div>
       <img src={value} />
     </section>
 

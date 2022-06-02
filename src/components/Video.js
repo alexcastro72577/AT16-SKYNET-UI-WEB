@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './VideoStyles.css'
-
+import { signInWithGoogle } from "../Firebase";
 import spaceVideo from '../assets/space.mp4'
 
 const Video = () => {
@@ -14,7 +14,7 @@ const Video = () => {
                 <h1>Welcome to SkyNET</h1>
                 <p>The best place to launch your ideas.</p>
                 <div>
-                    <Link to='/dashboard' className='btn'>Start SkyNET</Link>
+                <button type="button" class="btn btn-primary btn-lg btn-block" onClick={signInWithGoogle}>Enter to skynet project</button>
                 </div>
             </div>
         </div>
