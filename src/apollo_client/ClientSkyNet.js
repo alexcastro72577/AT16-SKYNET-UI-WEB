@@ -1,12 +1,10 @@
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
+import { createUploadLink } from 'apollo-upload-client'
 
 const clientSkyNet = new ApolloClient({
-    uri: process.env.REACT_APP_GRAPHQL_SKYNET,
-    headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': true,
-      },
+    link: createUploadLink({
+      uri: process.env.REACT_APP_GRAPHQL_SKYNET
+    }),
     cache: new InMemoryCache(),
 })
 

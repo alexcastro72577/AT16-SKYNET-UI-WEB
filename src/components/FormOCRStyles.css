@@ -1,0 +1,66 @@
+.form-main {
+    border: 5px solid rgba(0, 0, 0, 0.904);
+    box-shadow: 0 0 10px rgb(170, 237, 241);
+    background-color: rgba(227, 227, 240, 0.856);
+    border-radius: 10px;
+    min-height: 70vh;
+    width: 940px;
+    margin: 0;
+    padding: 10px;
+}
+.form-inputs {
+    
+    border: 0px solid blue;
+    background-color: rgba(0, 0, 0, 0.863);
+    border-radius: 8px;
+    min-height: 100px;
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.main-graph {
+    
+    min-height: 540px;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load-graph {
+    border: 1px solid black;
+    min-height: inherit;
+    width: 100%;
+}
+
+.result-graph {
+    border: 1px solid black;
+    min-height: inherit;
+    width: 100%;
+}
+.form-inputs-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: nowrap;
+}
+.form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 10px;
+}
+.inputs {
+    width: 80px;
+    height: 25px;
+}
+
+.style-link {
+    padding : 10px 10px; 
+}
+.link {
+    color: rgb(156, 175, 185);
+}
