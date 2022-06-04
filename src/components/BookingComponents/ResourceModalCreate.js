@@ -32,7 +32,7 @@ const ResourceModalCreate = () => {
     const type_value= values.type
     const model_value= values.model
     const state_value= values.state
-    createResource ({variables: {name1: name_value, type1: type_value, model1: model_value, state1: state_value}});
+    createResource ({variables: {name_value: name_value, type_value: type_value, model_value: model_value, state_value: state_value}});
     handleCancel()
   };
   const onReset = () => {
