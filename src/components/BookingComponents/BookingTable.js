@@ -13,7 +13,7 @@ const columns = [
   },
   {
     title: 'Subject',
-    dataIndex: 'subject',
+    dataIndex: 'details.subject',
     key: 'subject',
     
   },
@@ -66,10 +66,10 @@ const columns = [
     render: (_, record) => (
       <Space size="middle">
         <BookingModalUpdate id={record._id} 
-        descrption={record.descrption}
-        subject={record.subject}
-        personId={record.person_id}
-        resourceId={record.resource_id}
+        description={record.details.description}
+        subject={record.details.subject}
+        personId={record.person.id}
+        resourceId={record.resource.id}
         date={record.date}
         endTime={record.end_time}
         startTime={record.start_time}

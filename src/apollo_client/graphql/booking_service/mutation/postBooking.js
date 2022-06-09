@@ -2,7 +2,7 @@ import { gql } from '@apollo/client'
 
 const POST_BOOKING = gql`
     mutation listar($description_value: String!, $subject_value: String!, $personId_value: String!, $resourceId_value: String!, $date_value: String!, $endTime_value: String!, $startTime_value: String!, $state_value: String!, $type_value: String!) {
-        createPerson(
+        createBooking(
             description: $description_value,
             subject: $subject_value,
             person_id:$personId_value,

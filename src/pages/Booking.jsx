@@ -3,7 +3,7 @@ import {Form, Label, ContainerCenterButton, Button, SuccessMessage, ErrorMessage
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from '../components/Input';
-import POST_BOOKINGS from "../apollo_client/graphql/booking_service/mutation/postBooking"; 
+import POST_BOOKING from "../apollo_client/graphql/booking_service/mutation/postBooking"; 
 import { useMutation } from '@apollo/client';
 import GET_BOOKING from "../apollo_client/graphql/booking_service/query/getBooking";
 
@@ -27,7 +27,7 @@ const Booking = () => {
 	const startTime1 = startTime.field
     const state1 = state.field
     const type1 = type.field
-	const [ createBooking ] = useMutation(POST_BOOKINGS, {
+	const [ createBooking ] = useMutation(POST_BOOKING, {
 		refetchQueries: [{ query: GET_BOOKING}]
 	})
 
@@ -68,7 +68,7 @@ const Booking = () => {
 
 	return (
 		<main>
-      		<Label >Register a Person</Label><br />
+      		<Label >Register a Booking</Label><br />
 			<Form action="" onSubmit={onSubmit}>
 			
 				<Input
