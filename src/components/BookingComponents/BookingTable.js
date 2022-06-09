@@ -7,43 +7,43 @@ import { Space, Table,} from 'antd';
 const columns = [
   {
     title: 'Description',
-    dataIndex: 'description',
+    dataIndex: ['details','description'],
     key: 'description',
     
   },
   {
     title: 'Subject',
-    dataIndex: 'details.subject',
+    dataIndex: ['details','subject'],
     key: 'subject',
     
   },
   {
     title: 'PersonId',
-    dataIndex: 'person_id',
+    dataIndex: ['person','id'],
     key: 'personId',
     
   },
   {
     title: 'ResourceId',
-    dataIndex: 'resource_id',
+    dataIndex: ['resource','id'],
     key: 'resourceId',
     
   },
   {
     title: 'Date',
-    dataIndex: 'date',
+    dataIndex: ['schedule','date'],
     key: 'date',
     
   },
   {
     title: 'End_time',
-    dataIndex: 'end_time',
+    dataIndex: ['schedule','end_time'],
     key: 'endTime',
     
   },
   {
     title: 'Start_time',
-    dataIndex: 'start_time',
+    dataIndex: ['schedule','start_time'],
     key: 'startTime',
     
   },
@@ -75,8 +75,11 @@ const columns = [
         startTime={record.start_time}
         state={record.state}
         type={record.type}
+        
         />
         <BookingModalDelete id={record._id}/>
+        {console.log(record.details.description)}
+        
       </Space>
     ),
   },
