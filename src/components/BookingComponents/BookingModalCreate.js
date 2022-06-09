@@ -12,6 +12,7 @@ const layout = {
     span: 16,
   },
 };
+
 const tailLayout = {
   wrapperCol: {
     offset: 8,
@@ -64,7 +65,7 @@ const BookingModalCreate = () => {
         <Space>
         <PlusCircleOutlined /> Add Booking
         </Space>
-      </Button>
+    </Button>
        <Modal
         visible={isModalVisible}
         title="New Booking"
@@ -99,7 +100,7 @@ const BookingModalCreate = () => {
         </Form.Item>
         <Form.Item
           name="personId"
-          label="PersonId"
+          label="PersonId"  
           rules={[
             {
               required: true,
@@ -108,9 +109,11 @@ const BookingModalCreate = () => {
         >
           <Input />
         </Form.Item>
+        <Button type='default'>...</Button>
         <Form.Item
           name="resourceId"
           label="ResourceId"
+          Button="..."
           rules={[
             {
               required: true,
