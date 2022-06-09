@@ -3,7 +3,7 @@
     box-shadow: 0 0 10px rgb(170, 237, 241);
     background-color: rgba(227, 227, 240, 0.856);
     border-radius: 10px;
-    min-height: 70vh;
+    min-height: 600px;
     width: 940px;
     margin: 0;
     padding: 10px;
@@ -30,15 +30,19 @@
 }
 
 .load-graph {
-    border: 1px solid black;
-    min-height: inherit;
+    border: 10px solid black;
     width: 100%;
+    min-height: 500px;
 }
 
 .result-graph {
-    border: 1px solid black;
-    min-height: inherit;
+    border: 10px solid black;
     width: 100%;
+    min-height: 500px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .form-inputs-main {
     display: flex;
@@ -51,16 +55,102 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding: 0px 10px;
+    padding: 15px 10px;
 }
 .inputs {
-    width: 80px;
-    height: 25px;
+    width: 150px;
+    height: 30px;
+    text-decoration-color: rgb(135, 28, 28);
+    color: black;
+    font-weight: bold;
 }
 
 .style-link {
-    padding : 10px 10px; 
+    padding : 10px 10px;
+    margin: 80px;
+    color: white;
+    font-weight: bold;
 }
 .link {
     color: rgb(156, 175, 185);
+}
+.button {
+    display:block;
+    padding: 10px 21px;
+    border: none;
+    color:rgb(170, 237, 241);
+    font-size: 18px;
+    background-color: #134655;
+    border-radius: 3px;
+    cursor: pointer;
+    border-bottom: 3px solid #237085;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+.button:hover{
+    transition: all .4s;
+    background-color: #237085;
+}
+.image {
+    margin: 20px;
+    margin-left: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btndownload {
+    padding: 10px 21px;
+    border: none;
+    color:rgb(170, 237, 241);
+    font-size: 18px;
+    background-color: #bc5b15;
+    border-radius: 3px;
+    cursor: pointer;
+    border-bottom: 3px solid #b57e1f;
+    font-family: sans-serif;
+    text-align: center;
+}
+.btndownload:hover{
+    transition: all .4s;
+    background-color: #dfa214;
+}
+
+.btnconvert {
+    display: flex;
+    padding: 10px 21px;
+    border: none;
+    color:rgb(170, 237, 241);
+    font-size: 18px;
+    background-color: #134655;
+    border-radius: 3px;
+    cursor: pointer;
+    border-bottom: 3px solid #237085;
+    font-family: sans-serif;
+    text-align: center;
+    margin-left: 150px;
+}
+.btnconvert:hover{
+    transition: all .4s;
+    border-bottom: 3px solid #237085;
+}
+
+.btnrefresh {
+    display: flex;
+    padding: 10px 21px;
+    border: none;
+    color:rgb(170, 237, 241);
+    font-size: 18px;
+    background-color: #134655;
+    border-radius: 3px;
+    cursor: pointer;
+    border-bottom: 3px solid #237085;
+    font-family: sans-serif;
+    text-align: center;
+    margin-left: 170px;
+    margin-top: 10px;
+}
+.btnrefresh:hover{
+    transition: all .4s;
+    border-bottom: 3px solid #237085;
 }

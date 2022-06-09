@@ -1,5 +1,12 @@
+import React from "react";
+import FormAudio from "../components/FormAudio";
 const Audio = () => {
-  return <div className="title"> Audio Converter</div>;
-};
-
-export default Audio;
+  return (
+    <div>
+      <div className="title"> Convert Audio</div>
+      <FormAudio />
+    </div>
+    );
+  };
+  
+  export default Audio;

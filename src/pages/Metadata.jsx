@@ -1,5 +1,12 @@
+import React from "react";
+import FormMetadata from "../components/FormMetadata";
 const Metadata = () => {
-  return <div className="title"> Metadata</div>;
-};
-
-export default Metadata;
+  return (
+    <div>
+      <div className="title"> Convert Metadata</div>
+      <FormMetadata />
+    </div>
+    );
+  };
+  
+  export default Metadata;
