@@ -6,12 +6,12 @@ const POST_BOOKING = gql`
             description: $description_value,
             subject: $subject_value,
             person_id:$personId_value,
-            resource_id: resourceId_value,
-            date: date_value,
-            end_time: endTime_value,
-            start_time: startTime_value,
-            state: state_value,
-            type: type_value)
+            resource_id: $resourceId_value,
+            date: $date_value,
+            end_time: $endTime_value,
+            start_time: $startTime_value,
+            state: $state_value,
+            type: $type_value)
         { 
             success
             errors
