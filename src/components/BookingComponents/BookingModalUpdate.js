@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal, Space, Form, Input } from 'antd';
 import { EditOutlined } from '@ant-design/icons';
-import UPDATE_PERSON from "../../apollo_client/graphql/booking_service/mutation/updatePersons"; 
+import UPDATE_BOOKING from "../../apollo_client/graphql/booking_service/mutation/updateBooking"; 
 import { useMutation } from '@apollo/client';
 
 const layout = {
@@ -19,31 +19,38 @@ const tailLayout = {
   },
 };
 
-
-const PersonModalUpdate = (props) => {
-  // Change mutation tyoe for Update person
-  const [updatePerson] = useMutation(UPDATE_PERSON)
+const BookingModalUpdate = (props) => {
+  // Change mutation tyoe for Update Booking
+  const [updateBooking] = useMutation(UPDATE_BOOKING)
 
   //Forms functions
   const [form] = Form.useForm();
   form.setFieldsValue({
     id: props.id,
-    name: props.name,
-    age: props.age,
-    city: props.city,
-    country: props.country,
-    gender: props.gender
+    description: props.description,
+    subject: props.subject,
+    personId: props.personId,
+    resourceId: props.resourceId,
+    date: props.date,
+    endTime: props.endTime,
+    startTime: props.startTime,
+    state: props.state,
+    type: props.type
   });  
   const onFinish = (values) => {
     console.log(values);
     const id = values.id
-    const name_value= values.name
-    const age_value= values.age
-    const city_value= values.city
-    const country_value= values.country
-    const gender_value= values.gender
+    const description_value= values.description
+    const subject_value= values.subject
+    const personId_value= values.personId
+    const resourceId_value= values.resourceId
+    const date_value= values.date
+    const endTime_value= values.endTime
+    const startTime_value= values.startTime
+    const state_value= values.state
+    const type_value= values.type
     // Change mutation script
-    updatePerson ({variables: {id, name_value: name_value, age_value: age_value, city_value: city_value, country_value: country_value, gender_value: gender_value}});
+    updateBooking ({variables: {id, description_value: description_value, subject_value: subject_value, personId_value: personId_value, resourceId_value: resourceId_value, date_value: date_value, endTime_value: endTime_value, startTime_value: startTime_value, state_value: state_value, type_value: type_value}});
     handleCancel()
   };
   const onReset = () => {
@@ -71,7 +78,7 @@ const PersonModalUpdate = (props) => {
       </Button>
        <Modal
         visible={isModalVisible}
-        title="Update Person"
+        title="Update Booking"
         onOk={handleOk}
         onCancel={handleCancel}
         footer={[
@@ -84,9 +91,9 @@ const PersonModalUpdate = (props) => {
            hidden>
             <Input />
           </Form.Item>
-        <Form.Item
-          name="name"
-          label="Name"
+          <Form.Item
+          name="description"
+          label="Description"
           rules={[
             {
               required: true,
@@ -96,8 +103,8 @@ const PersonModalUpdate = (props) => {
           <Input />
         </Form.Item>
         <Form.Item
-          name="age"
-          label="Age"
+          name="subject"
+          label="Subject"
           rules={[
             {
               required: true,
@@ -107,8 +114,8 @@ const PersonModalUpdate = (props) => {
           <Input />
         </Form.Item>
         <Form.Item
-          name="city"
-          label="City"
+          name="personId"
+          label="PersonId"
           rules={[
             {
               required: true,
@@ -118,8 +125,8 @@ const PersonModalUpdate = (props) => {
           <Input />
         </Form.Item>
         <Form.Item
-          name="country"
-          label="Country"
+          name="resourceId"
+          label="ResourceId"
           rules={[
             {
               required: true,
@@ -129,8 +136,52 @@ const PersonModalUpdate = (props) => {
           <Input />
         </Form.Item>
         <Form.Item
-          name="gender"
-          label="Gender"
+          name="date"
+          label="Date"
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+        <Form.Item
+          name="endTime"
+          label="EndTime"
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+        <Form.Item
+          name="startTime"
+          label="StartTime"
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+        <Form.Item
+          name="state"
+          label="State"
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+        <Form.Item
+          name="type"
+          label="Type"
           rules={[
             {
               required: true,
@@ -158,4 +209,4 @@ const PersonModalUpdate = (props) => {
   );
 };
 
-export default PersonModalUpdate;
+export default BookingModalUpdate;
