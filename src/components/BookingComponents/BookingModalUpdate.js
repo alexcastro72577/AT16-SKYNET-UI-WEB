@@ -20,7 +20,7 @@ const tailLayout = {
 };
 
 const BookingModalUpdate = (props) => {
-  // Change mutation tyoe for Update person
+  // Change mutation tyoe for Update Booking
   const [updateBooking] = useMutation(UPDATE_BOOKING)
 
   //Forms functions
@@ -28,6 +28,7 @@ const BookingModalUpdate = (props) => {
   form.setFieldsValue({
     id: props.id,
     description: props.description,
+    subject: props.subject,
     personId: props.personId,
     resourceId: props.resourceId,
     date: props.date,
@@ -192,7 +193,7 @@ const BookingModalUpdate = (props) => {
 
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
-            Create
+            Update
           </Button>
           <Button htmlType="button" onClick={onReset}>
             Cancel

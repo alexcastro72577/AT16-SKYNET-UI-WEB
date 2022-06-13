@@ -142,7 +142,7 @@ const PersonModalUpdate = (props) => {
 
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
-            Create
+            Update
           </Button>
           <Button htmlType="button" onClick={onReset}>
             Cancel

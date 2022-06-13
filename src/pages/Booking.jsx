@@ -7,7 +7,7 @@ import POST_BOOKING from "../apollo_client/graphql/booking_service/mutation/post
 import { useMutation } from '@apollo/client';
 import GET_BOOKING from "../apollo_client/graphql/booking_service/query/getBooking";
 
-const Booking = () => {
+export const Booking = () => {
 	const [description, editDescription] = useState({field: '', valid: null});
 	const [subject, editSubject] = useState({field: '', valid: null});
   	const [personId, editPersonId] = useState({field: '', valid: null});
@@ -31,25 +31,11 @@ const Booking = () => {
 		refetchQueries: [{ query: GET_BOOKING}]
 	})
 
-	/*const expressions = {
-		name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
-		country: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
-    	gender: /^[FM\s]{1,1}$/,
-		city: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-		age: /^\d{1,3}$/
-	}*/
-
+	
 
 	const onSubmit = (e) => {
 		e.preventDefault();
 
-		/*if(
-			name.valid === 'true' &&
-			country.valid === 'true' &&
-      		gender.valid === 'true' &&
-			city.valid === 'true' &&
-			age.valid === 'true'
-		){*/
 			createBooking ({variables: {description1, subject1, personId1, resourceId1, date1, endTime1, startTime1, state1, type1}});
 			editValidForm(true);
 			editDescription({field: '', valid: ''});
@@ -61,9 +47,7 @@ const Booking = () => {
             editStartTime({field: '', valid: null});
             editState({field: '', valid: null});
             editType({field: '', valid: null});
-		/*} else {
-			editValidForm(false);
-		}*/
+		
 	}
 
 	return (

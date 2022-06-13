@@ -109,7 +109,6 @@ const BookingModalCreate = () => {
         >
           <Input />
         </Form.Item>
-        <Button type='default'>...</Button>
         <Form.Item
           name="resourceId"
           label="ResourceId"
